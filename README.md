@@ -7,7 +7,7 @@ You have to:
   sudo apt-get update && apt-get install iptables-persistent -y
 
 Then you have to give execution permissions to the file:
-sudo chmod +x firewall.sh
+sudo chmod +x Firewall.sh
 
 Finally, change the IP (XXX.XXX.XXX.XXX/32) with your static public IP.
 You can set a dns name too.
