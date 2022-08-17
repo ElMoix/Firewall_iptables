@@ -50,7 +50,8 @@ case "$1" in
         /sbin/iptables -X
         /sbin/iptables -Z
     	/sbin/iptables -t nat -F
-
+	
+	echo "Stopping Firewall."
         ;;
   *)
         echo "Usage: /etc/init.d/firewall {start|stop}"
