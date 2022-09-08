@@ -14,3 +14,7 @@ When you proceed to execute the script, it will ask you to save the current ipv4
 You simply accept saving the current ipv4 iptables rules selecting 'yes'.
 
 This script must be executed as root.
+
+CHECK IF WORKED:
+iptables -nvL
+cat /etc/iptables/rules.v4
