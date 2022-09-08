@@ -11,10 +11,9 @@ sudo chmod +x Firewall.sh
 USAGE:
 ./Firewall.sh start
 When you proceed to execute the script, it will ask you to save the current ipv4 and ipv6 iptables rules into a specific path.
-\nYou simply accept saving the current ipv4 iptables rules selecting 'yes'.
+You simply accept saving the current ipv4 iptables rules selecting 'yes'.
 
 This script must be executed as root.
 
 CHECK IF WORKED:
-iptables -nvL
-\ncat /etc/iptables/rules.v4
+iptables -nvL or cat /etc/iptables/rules.v4
