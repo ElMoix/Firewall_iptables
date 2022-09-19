@@ -9,11 +9,12 @@ Edit the file Firewall.sh and change the variable $PUBLICIP (XXX.XXX.XXX.XXX/32)
 sudo chmod +x Firewall.sh
 
 ### USAGE:
-sudo ./Firewall.sh start
+sudo ./Firewall.sh {start/stop}
+
 When you proceed to execute the script, it will ask you to save the current ipv4 and ipv6 iptables rules into a specific path.
 You simply accept saving the current ipv4 iptables rules selecting 'yes'.
 
 **This script must be executed as root.**
 
 ### CHECK IF WORKED:
-iptables -nvL or cat /etc/iptables/rules.v4
+iptables -nvL **OR** cat /etc/iptables/rules.v4
