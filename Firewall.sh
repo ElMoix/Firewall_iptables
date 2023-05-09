@@ -6,13 +6,12 @@ XLAN="192.168.1.0/24"
 ETHWAN="enp1s0"
 RASPI="192.168.1.200"
 
+# Check for Root Privileges
+if ! [ $USER = 'root' ];then
+	echo "This script must be executed as root.\n"
+fi
 case "$1" in
   start)
-        # Check for Root Privileges
-	if ! [ $USER = 'root' ];then
-		echo "This script must be executed as root.\n"
-	else
-
 	# Starting firewall
         echo "Executing Firewall Rules..."
 
@@ -63,11 +62,10 @@ case "$1" in
 		echo "$REQUIRED_PKG is not installed and must be. Now will be installed.\n"
   		sudo apt-get install $REQUIRED_PKG --yes
 	fi
-	iptables-save > /etc/iptables/rules.v4
+	/sbin/iptables-save > /etc/iptables/rules.v4
 
 	echo "\nOK. All done !!"
 	echo "Check using: sudo iptables -nvL"
-	fi
         ;;
 
   stop)
